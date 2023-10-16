@@ -3,9 +3,8 @@
 Use this snippet to show your support for Palestine on the top of your website. Installing it takes minutes.
 
 1. [About](#about)
-1. [Installation](#installation)
-1. [Multilingual version](#multilingual-version)
-1. [Reporting issues](#reporting-issues)
+2. [Installation](#installation)
+3. [Reporting issues](#reporting-issues)
 
 ## About
 
