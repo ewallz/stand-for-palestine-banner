@@ -21,15 +21,15 @@ Installation is dead simple. Just copy this code to your template right before t
 
 ```
 <script>
-// Define the function to create and display the banner
+// Support Palestine Banner by eWallz
 function createBanner() {
   // Create the banner container
   var banner = document.createElement('a');
-  banner.className = 'support-palestine'; // Apply your banner class
-  banner.href = 'https://jommenyumbang.com/ms/home';
+  banner.className = 'support-palestine';
+  banner.href = 'https://jommenyumbang.com/ms/home';// set your link here
   banner.target = '_blank'; // Open the link in a new tab
 
-  // Create the banner content
+  // set your text here
   var bannerContent = `
     <div class="support-palestine-flag" role="img" aria-label="Flag of Palestine">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 1000 500">
@@ -39,19 +39,20 @@ function createBanner() {
         <path fill="#268024" d="M 223.5,332.5 C 482.167,332.5 740.833,332.5 999.5,332.5C 999.5,388.167 999.5,443.833 999.5,499.5C 666.5,499.5 333.5,499.5 0.5,499.5C 74.2969,443.103 148.63,387.437 223.5,332.5 Z"/>
       </svg>
     </div>
-    <div class="support-palestine__label" style="color: white; margin-left: 10px;">
-      Donate to support Palestine Freedom ❤️ #Solidarity4Palestine #Pray4Palestine
+    <div class="support-palestine__label" style="color: white; margin-left: 10px; text-align: center;">
+      Donate to support Palestine Freedom ❤️
+      <span class="mobile-hidden">#Solidarity4Palestine #Pray4Palestine</span>
     </div>
   `;
 
   banner.innerHTML = bannerContent;
 
-  // Style the banner with the gradient background
+  // edit your color & styles here
   banner.style.position = 'fixed';
   banner.style.left = '0';
   banner.style.top = '0';
   banner.style.right = '0';
-  banner.style.background = 'linear-gradient(rgb(49 64 154), rgb(37, 98, 217))'; // Gradient background
+  banner.style.background = 'linear-gradient(rgb(28 178 226), rgb(80 134 238))'; // Gradient background
   banner.style.display = 'flex';
   banner.style.justifyContent = 'center';
   banner.style.paddingTop = '5px';
@@ -63,14 +64,24 @@ function createBanner() {
   // Append the banner to the body
   document.body.appendChild(banner);
 
-  // Apply a top margin to other page elements (with !important to force it)
-  var contentBelowBanner = document.querySelector('.content-below-banner');
+  // add element id - class to be shifted below banner (with !important to force it)
+  var contentBelowBanner = document.querySelector('.navbar');
   if (contentBelowBanner) {
     contentBelowBanner.style.marginTop = '60px !important'; // Adjust the margin value as needed
   }
+
+  // second text will be hidden on mobile
+  var style = document.createElement('style');
+  style.innerHTML = `
+    @media (max-width: 768px) {
+      .mobile-hidden {
+        display: none;
+      }
+    }
+  `;
+  document.head.appendChild(style);
 }
 
-// Call the createBanner function when the page is fully loaded
 window.addEventListener('load', createBanner);
 </script>
 ```
