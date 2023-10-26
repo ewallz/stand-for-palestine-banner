@@ -84,7 +84,7 @@ function createBanner() {
 window.addEventListener('load', createBanner);
 </script>
 ```
-**Another floating version:**
+**Another tuned floating version:**
 ```
 <div id="widget-stand-for"></div>
 <script position="top-right">
