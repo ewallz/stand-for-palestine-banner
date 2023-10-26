@@ -85,6 +85,7 @@ window.addEventListener('load', createBanner);
 </script>
 ```
 **Another tuned floating version:**
+![Example of the banner](floating-banner.jpg "Example of the banner")
 ```
 <div id="widget-stand-for"></div>
 <script position="top-right">
